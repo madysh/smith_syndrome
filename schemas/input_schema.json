@@ -1,0 +1,147 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Patient",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "firstName": {
+            "type": "string"
+        },
+        "lastName": {
+            "type": "string"
+        },
+        "dateOfBirth": {
+            "type": "string",
+            "pattern": "\\d{4}-\\d{2}-\\d{2}"
+        },
+        "birthSex": {
+            "$ref": "#/definitions/birthSex"
+        },
+        "cancers": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/cancer"
+            }
+        },
+        "family": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/familyMember"
+            }
+        },
+        "motherId": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "fatherId": {
+            "type": [
+                "string",
+                "null"
+            ]
+        }
+    },
+    "definitions": {
+        "birthSex": {
+            "type": "string",
+            "enum": [
+                "female",
+                "male"
+            ]
+        },
+        "cancer": {
+            "type": "object",
+            "properties": {
+                "cancerType": {
+                    "type": "string",
+                    "enum": [
+                        "brain",
+                        "breast",
+                        "colorectal",
+                        "endometrial",
+                        "gastric",
+                        "kidney"
+                    ]
+                },
+                "ageOfDiagnosis": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "cancerType"
+            ]
+        },
+        "familyMember": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "age": {
+                    "type": "integer"
+                },
+                "motherId": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "fatherId": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "birthSex": {
+                    "$ref": "#/definitions/birthSex"
+                },
+                "relationship": {
+                    "type": "string",
+                    "enum": [
+                        "brother",
+                        "daughter",
+                        "father",
+                        "granddaughter",
+                        "grandson",
+                        "maternal aunt",
+                        "maternal first cousin",
+                        "maternal grandfather",
+                        "maternal grandmother",
+                        "maternal half brother",
+                        "maternal half sister",
+                        "maternal uncle",
+                        "mother",
+                        "other",
+                        "paternal aunt",
+                        "paternal first cousin",
+                        "paternal grandfather",
+                        "paternal grandmother",
+                        "paternal half brother",
+                        "paternal half sister",
+                        "paternal uncle",
+                        "sister",
+                        "son"
+                    ]
+                },
+                "cancers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/cancer"
+                    }
+                }
+            },
+            "required": [
+                "id",
+                "birthSex",
+                "relationship"
+            ]
+        }
+    },
+    "required": [
+        "birthSex",
+        "id"
+    ]
+}

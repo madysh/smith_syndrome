@@ -1,0 +1,13 @@
+{
+    "id": "abc123",
+    "firstName": "John",
+    "lastName": "CancerIQ",
+    "birthSex": "male",
+    "dateOfBirth": "1950-03-25",
+    "cancers": [{
+        "cancerType": "brain",
+        "ageOfDiagnosis": 54
+    }],
+    "motherId": null,
+    "fatherId": null
+}

@@ -1,0 +1,43 @@
+{
+    "title": "RiskData",
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "properties": {
+        "meetsCriteria": {
+            "type": "boolean"
+        },
+        "reasons": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "An individual with a Smith Syndrome cancer and an additional synchronous or metachronous Smith Syndrome cancer",
+                    "An individual with a Smith Syndrome cancer and one or more first-degree relatives with a Smith Syndrome cancer diagnosed at or before age 50",
+                    "An individual with a Smith Syndrome cancer and two or more first- or second-degree relatives with Smith Syndrome cancer or gastric cancer diagnosed at any age",
+                    "An individual with a Smith Syndrome cancer diagnosed at or before age 60",
+                    "An individual with a close relative with male breast cancer",
+                    "An individual with two or more close relatives with Smith Syndrome cancers, one diagnosed at or before age 50",
+                    "First-degree relative: An individual with a Smith Syndrome cancer and an additional synchronous or metachronous Smith Syndrome cancer",
+                    "First-degree relative: An individual with a Smith Syndrome cancer and one or more first-degree relatives with a Smith Syndrome cancer diagnosed at or before age 50",
+                    "First-degree relative: An individual with a Smith Syndrome cancer and two or more first- or second-degree relatives with Smith Syndrome cancer or gastric cancer diagnosed at any age",
+                    "First-degree relative: An individual with a Smith Syndrome cancer diagnosed at or before age 60",
+                    "First-degree relative: An individual with a close relative with male breast cancer",
+                    "First-degree relative: An individual with a close relative with two or more relatives with Smith Syndrome cancers, one diagnosed at or before age 50",
+                    "Second-degree relative: An individual with a Smith Syndrome cancer and an additional synchronous or metachronous Smith Syndrome cancer",
+                    "Second-degree relative: An individual with a Smith Syndrome cancer and one or more first-degree relatives with a Smith Syndrome cancer diagnosed at or before age 50",
+                    "Second-degree relative: An individual with a Smith Syndrome cancer and two or more first- or second-degree relatives with Smith Syndrome cancer or gastric cancer diagnosed at any age",
+                    "Second-degree relative: An individual with a Smith Syndrome cancer diagnosed at or before age 60",
+                    "Second-degree relative: An individual with a close relative with male breast cancer",
+                    "Second-degree relative: An individual with a close relative with two or more relatives with Smith Syndrome cancers, one diagnosed at or before age 50",
+                    "Third-degree relative: An individual with a Smith Syndrome cancer and an additional synchronous or metachronous Smith Syndrome cancer",
+                    "Third-degree relative: An individual with a Smith Syndrome cancer and one or more first-degree relatives with a Smith Syndrome cancer diagnosed at or before age 50",
+                    "Third-degree relative: An individual with a Smith Syndrome cancer and two or more first- or second-degree relatives with Smith Syndrome cancer or gastric cancer diagnosed at any age",
+                    "Third-degree relative: An individual with a Smith Syndrome cancer diagnosed at or before age 60",
+                    "Third-degree relative: An individual with a close relative with male breast cancer",
+                    "Third-degree relative: An individual with a close relative with two or more relatives with Smith Syndrome cancers, one diagnosed at or before age 50"
+                ]
+            }
+        }
+    },
+    "required": ["meetsCriteria", "reasons"]
+}

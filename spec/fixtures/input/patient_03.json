@@ -1,0 +1,39 @@
+{
+    "id": "abc123",
+    "motherId": "mama",
+    "fatherId": "papa",
+    "firstName": "John",
+    "lastName": "CancerIQ",
+    "birthSex": "male",
+    "dateOfBirth": "1950-03-25",
+    "cancers": [{
+        "cancerType": "brain"
+    }],
+    "family": [{
+            "id": "papa",
+            "motherId": "granny",
+            "fatherId": null,
+            "relationship": "father",
+            "birthSex": "male"
+        },
+        {
+            "id": "mama",
+            "age": 77,
+            "motherId": null,
+            "fatherId": null,
+            "relationship": "mother",
+            "birthSex": "female",
+            "cancers": [{
+                "cancerType": "breast",
+                "ageOfDiagnosis": 50
+            }]
+        },
+        {
+            "id": "granny",
+            "motherId": null,
+            "fatherId": null,
+            "relationship": "paternal grandmother",
+            "birthSex": "female"
+        }
+    ]
+}

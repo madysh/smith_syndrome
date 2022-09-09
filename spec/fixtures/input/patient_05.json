@@ -1,0 +1,41 @@
+{
+    "id": "patient",
+    "birthSex": "female",
+    "motherId": "mom",
+    "fatherId": "dad",
+    "family": [{
+            "id": "mom",
+            "birthSex": "female",
+            "motherId": null,
+            "fatherId": null,
+            "relationship": "mother"
+        },
+        {
+            "id": "dad",
+            "birthSex": "male",
+            "motherId": "grandma",
+            "fatherId": "grandpa",
+            "relationship": "father"
+        },
+        {
+            "id": "grandpa",
+            "birthSex": "male",
+            "motherId": null,
+            "fatherId": null,
+            "relationship": "paternal grandfather",
+            "cancers": [{
+                "cancerType": "gastric"
+            }]
+        },
+        {
+            "id": "grandma",
+            "birthSex": "female",
+            "motherId": null,
+            "fatherId": null,
+            "relationship": "paternal grandmother",
+            "cancers": [{
+                "cancerType": "kidney"
+            }]
+        }
+    ]
+}
